@@ -120,6 +120,7 @@ nav a{
     #signup,
     #home {
         width: 80%;
+            padding: 4rem 1rem !important;
     }
 }
 
@@ -128,9 +129,5 @@ nav a{
     #signup,
     #home {
         width: 90%;
-        height: 80vh;
-    }
-    #home{
-        height: calc(60vh - 80px);
     }
 }
