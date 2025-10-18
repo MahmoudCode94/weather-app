@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="./images/zu365.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div id="signup" class="container p-5 text-center d-flex flex-column justify-content-center gap-3 rounded-3 shadow container-sm">
+            <h1>Sign Up</h1>
+            <div class="form-floating">
+                <input type="text" class="form-control bg-transparent signup-name" id="floatingName" placeholder="Name">
+                <label for="floatingName">Enter Your Name</label>
+                <div class="invalid-feedback"></div>
+
+            </div>
+            <div class="form-floating">
+                <input type="email" class="form-control bg-transparent signup-email" id="floatingEmail"
+                    placeholder="name@example.com">
+                <label for="floatingEmail">Enter Your Email</label>
+                <div class="invalid-feedback"></div>
+
+            </div>
+            <div class="form-floating mb-2">
+                <input type="password" class="form-control bg-transparent signup-pass" id="floatingPassword"
+                    placeholder="Password">
+                <label for="floatingPassword">Enter Your Password</label>
+                <div class="invalid-feedback"></div>
+
+            </div>
+            <p id="signup-erorr" class="invalid-feedback fw-bolder fs-5 d-none m-0">All inputs are required</p>
+            <p id="signupEmail-erorr" class="invalid-feedback fw-bolder fs-5 d-none m-0">Email Already Exists</p>
+            <p id="signup-success" class="valid-feedback fw-bolder fs-5 d-none m-0">Signed Up</p>
+            <button id="signup-button" type="button" class="btn">Sign Up</button>
+            <div class="d-flex justify-content-center gap-1">
+                <p class="m-0">You have an account?</p> <a href="/index.html" id="login-link"
+                    class="text-decoration-none">Log in</a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
