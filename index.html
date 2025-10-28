@@ -1,26 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Dashboard</title>
+
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="container p-5">
+        <div class="weather-box shadow-lg rounded-4 overflow-hidden shadow">
+            <div class="row g-0">
+                <aside class="col-lg-4 p-4 sidebar text-white d-flex flex-column">
+                    <div class="search-box mb-3">
+                        <div class="position-relative w-100">
+                            <i
+                                class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-white-50"></i>
+                            <input type="text" id="searchLocation"
+                                class="form-control form-control-sm ps-5 bg-transparent text-white"
+                                placeholder="Insert your location..." value="">
+                        </div>
+                    </div>
+
+                    <div class="weather-info text-center flex-grow-1 d-flex flex-column justify-content-center">
+                        <div class="weather-illustration mb-3">
+                            <i class="fa-solid fa-moon fa-5x"></i>
+                        </div>
+                        <h1 class="fs-1 fw-bold">Cairo</h1>
+                        <h1 class="display-3 fw-bold mb-2 fs-2">23.2°<span class="fs-3">C</span></h1>
+                        <p class="mb-1">Local Time: <strong>10:28 PM</strong></p>
+                        <p class="text-white-50 mb-4">Clear Sky</p>
+                    </div>
+                </aside>
+
+                <main class="col-lg-8 p-4 bg-light position-relative">
+                    <div class="forecast-cards row g-3">
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center px-3 py-2 shadow-sm forecast-card d-flex align-items-center">
+                                <i class="fa-solid fa-cloud-sun fa-2x mb-2 text-warning"></i>
+                                <h6 class="fw-bold mb-1">Wed</h6>
+                                <small>30°C / 20°C</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center px-3 py-2 shadow-sm forecast-card d-flex align-items-center">
+                                <i class="fa-solid fa-cloud-showers-heavy fa-2x mb-2 text-primary"></i>
+                                <h6 class="fw-bold mb-1">Thu</h6>
+                                <small>27°C / 19°C</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card text-center px-3 py-2 shadow-sm forecast-card d-flex align-items-center">
+                                <i class="fa-solid fa-sun fa-2x mb-2 text-warning"></i>
+                                <h6 class="fw-bold mb-1">Fri</h6>
+                                <small>31°C / 21°C</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-4 text-center">
+                        <small class="text-muted">Last Updated: <strong>22:15</strong></small>
+                    </div>
+                    <h5 class="fw-bold mb-3 text-center">Current Details</h5>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">Feels Like</small>
+                                <h4 id="feels-like" class="fw-bold mt-2">--°C</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">Wind Speed</small>
+                                <h4 id="wind-speed" class="fw-bold mt-2">-- km/h</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">Humidity</small>
+                                <h4 id="humidity" class="fw-bold mt-2">--%</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">Pressure</small>
+                                <h4 id="pressure" class="fw-bold mt-2">-- mb</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">Visibility</small>
+                                <h4 id="visibility" class="fw-bold mt-2">-- km</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="card info-card p-3 text-center">
+                                <small class="text-muted">UV Index</small>
+                                <h4 id="uv" class="fw-bold mt-2">0</h4>
+                            </div>
+                        </div>
+                    </div>
 
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 
 </html>
