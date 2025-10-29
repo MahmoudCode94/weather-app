@@ -14,9 +14,9 @@
 
 <body>
     <div class="container p-5">
-        <div class="weather-box shadow-lg rounded-4 overflow-hidden shadow">
-            <div class="row g-0">
-                <aside class="col-lg-4 p-4 sidebar text-white d-flex flex-column">
+        <div class="weather-box shadow-lg overflow-hidden shadow rounded">
+            <div class="row g-0 all">
+                <aside class="col-lg-4 p-4 sidebar text-white d-flex flex-column rounded">
                     <div class="search-box mb-3">
                         <div class="position-relative w-100">
                             <i
@@ -26,7 +26,6 @@
                                 placeholder="Insert your location..." value="">
                         </div>
                     </div>
-
                     <div class="weather-info text-center flex-grow-1 d-flex flex-column justify-content-center">
                         <div class="weather-illustration mb-3">
                             <i class="fa-solid fa-moon fa-5x"></i>
@@ -37,8 +36,7 @@
                         <p class="text-white-50 mb-4">Clear Sky</p>
                     </div>
                 </aside>
-
-                <main class="col-lg-8 p-4 bg-light position-relative">
+                <main class="col-lg-8 p-4 position-relative rounded">
                     <div class="forecast-cards row g-3">
                         <div class="col-12 col-md-4">
                             <div class="card text-center px-3 py-2 shadow-sm forecast-card d-flex align-items-center">
@@ -73,35 +71,30 @@
                                 <h4 id="feels-like" class="fw-bold mt-2">--°C</h4>
                             </div>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card info-card p-3 text-center">
                                 <small class="text-muted">Wind Speed</small>
                                 <h4 id="wind-speed" class="fw-bold mt-2">-- km/h</h4>
                             </div>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card info-card p-3 text-center">
                                 <small class="text-muted">Humidity</small>
                                 <h4 id="humidity" class="fw-bold mt-2">--%</h4>
                             </div>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card info-card p-3 text-center">
                                 <small class="text-muted">Pressure</small>
                                 <h4 id="pressure" class="fw-bold mt-2">-- mb</h4>
                             </div>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card info-card p-3 text-center">
                                 <small class="text-muted">Visibility</small>
                                 <h4 id="visibility" class="fw-bold mt-2">-- km</h4>
                             </div>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card info-card p-3 text-center">
                                 <small class="text-muted">UV Index</small>
@@ -109,13 +102,10 @@
                             </div>
                         </div>
                     </div>
-
-
                 </main>
             </div>
         </div>
     </div>
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
